@@ -61,8 +61,10 @@ new Vue({
             var healing = Math.max(Math.floor(Math.random() * max) + 1, min);
             this.playerHealth += healing;
 
-            if(this.playerHealth = 100) {
-                this.healing = false;
+            if (this.playerHealth <= 90) {
+                this.playerHealth +- healing;
+            } else {
+                this.playerHealth = 100;
             }
         },
         wuss: function() {
